@@ -1,20 +1,21 @@
-:root{
+:root {
 
     /*Renkler*/
-    --backgroundColor:#292929;
-    --seat-color:#444451;
-  --text-color:#777;
-    --reserved-color:#fff;
-    --selected-color:#f6eb6f;
-    --info-background:rgba(0,0,0,0.2);
+    --backgroundColor: #292929;
+    --seat-color: #444451;
+    --text-color: #777;
+    --reserved-color: #fff;
+    --selected-color: #f6eb6f;
+    --info-background: rgba(0, 0, 0, 0.2);
 
 
-/*Oluşumlar*/
---transition:all .5s ease;
+    /*Oluşumlar*/
+    --transition: all .5s ease;
     /*Gölgeler*/
-    --box-shadow: 0 3px 8px rgba(255,255,255,0.7);
+    --box-shadow: 0 3px 8px rgba(255, 255, 255, 0.7);
 }
-*{
+
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
@@ -22,69 +23,67 @@
 }
 
 
-body{
-background-color: var(--backgroundColor);
-display: flex;
-align-items: center;
-justify-content: center;
-height: 100vh;
-flex-direction: column;
+body {
+    background-color: var(--backgroundColor);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    flex-direction: column;
 
 }
 
 
 /*Sinema Perdesi*/
 
-.screen{
+.screen {
     margin: 20px 0;
     box-shadow: var(--box-shadow);
     height: 100px;
 
 }
 
-.screen img{
+.screen img {
     width: 100%;
     height: 100%;
 }
 
-/*Sinema Perdesi*/
-
 
 /*Koltuklar */
 
-.seat.reserved{
+.seat.reserved {
     color: var(--reserved-color);
 }
 
-.seat.selected{
+.seat.selected {
     color: var(--selected-color);
 }
 
-.seatsRow{
+.seatsRow {
     display: flex;
 
 }
 
-.seat{
+.seat {
     color: var(--seat-color);
     font-size: 20px;
     margin: 5px;
     transition: var(--transition);
 }
 
-.seat:not(.reserved):hover{
+.seat:not(.reserved):hover {
     cursor: pointer;
     transform: scale(1.3);
 }
 
 /*Film Seçim Barı*/
 
-.movie-list{
+.movie-list {
     margin: 20px 0;
 }
 
 
-.info{
+.info {
     background-color: var(--info-background);
     display: flex;
     padding: 5px 10px;
@@ -92,24 +91,24 @@ flex-direction: column;
     gap: 8px;
 }
 
-.info li{
+.info li {
     display: flex;
     align-items: center;
     justify-content: center;
     gap: 5px;
 }
 
-.infoText{
+.infoText {
     color: var(--reserved-color);
     margin: 5px 0;
-display: none;
+    display: none;
 
 }
 
-.infoText.open{
+.infoText.open {
     display: block;
 }
 
-.infoText span{
+.infoText span {
     color: var(--selected-color);
 }
